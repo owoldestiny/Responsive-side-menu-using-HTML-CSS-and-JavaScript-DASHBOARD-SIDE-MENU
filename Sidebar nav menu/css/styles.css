@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Ubuntu, 'Open Sans', sans-serif;
+    color: #323232;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    background: #fff;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #515152;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #323232;
+    text-decoration: none;
+}
+
+.page-wrapper {
+    position: relative;
+    transition: 0.3s;
+    margin: 10px 120px;
+}
+
+.side-menu .logo {
+    position: relative;
+}
+
+.side-menu .logo-top {
+    opacity: 0;
+    width: 40px;
+    transition: .1s .1s ease-in;
+}
+
+.side-menu .menu-toggle {
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    transition: .2s ease-in;
+    width: 30px;
+}
+
+.side-menu .menu-toggle:hover,
+.side-menu .menu-toggle:focus {
+    background: #323232;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.side-menu {
+    color: white;
+    background-color: #121619;
+    padding: 30px 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 72px;
+    transition: 0.3s;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.side-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 0 12px;
+    transition: ease 0.3s;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.side-menu .item.list {
+    margin-top: 12px;
+    display: block;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.side-menu li .item.list:hover,
+.side-menu li .item.list:focus {
+    background-color: #242424;
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.side-menu .item.list span {
+    line-height: 0;
+}
+
+.side-menu li:hover span {
+    color: #f1f1f1;
+}
+
+.side-menu .item {
+    transition: 0.3s;
+}
+
+.side-menu .item.list img {
+    width: 24px;
+}
+
+.side-menu ul li i {
+    padding: 0 16px 0 0;
+    font-size: 25px;
+    color: #f1f1f1;
+}
+
+.side-menu ul li span {
+    font-size: 16px;
+    overflow-x: hidden;
+    transition: 0.3s ease-in;
+    color: #f1f1f1;
+    opacity: 0;
+}
+
+.side-menu ul form input {
+    height: 48px;
+    width: 100%;
+    outline: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    background-color: #121619;
+    border: 1px solid #515152;
+    border-radius: 5px;
+}
+
+ ::placeholder {
+    font-size: 16px;
+}
+
+.side-menu ul li.search .item.list {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul .search .item.list:hover {
+    background-color: transparent;
+}
+
+.side-menu ul .search img {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+}
+
+
+/* width */
+
+.side-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+.side-menu::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #121619;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+.side-menu::-webkit-scrollbar-thumb {
+    background: #515152;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+    background: #515152;
+}
+
+
+/* ? This is to puch the main page to the side */
+
+.menu-active .page-wrapper {
+    transform: translateX(200px);
+}
+
+.span-active .text,
+.span-active .logo-top {
+    opacity: 1;
+    transition: .2s .1s ease-out;
+}
+
+.menu-active .side-menu {
+    width: 250px;
+}
+
+.toggle-active .side-menu .menu-toggle {
+    right: 5%;
+    transform: translateX(155px) rotate(180deg);
+    transform-origin: 0% 40%;
+    transition: .3s ease-in;
+}
+
+body.body-active {
+    background: rgba(0, 0, 0, 0.2);
+}
